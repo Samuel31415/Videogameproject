@@ -6,12 +6,18 @@
     </head>
     <body>
     <style>
-        body {
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a1/Mallard2.jpg");
     </style>
+        <button id="button">hi</button>
     <script>
         console.log(window.outerWidth);
         console.log(window.outerHeight);
+        const things=[];
+        var testytest=document.getElementById("button")
+        var testFunction=function(){
+            things.push("things")
+            console.log(things)
+        }
+        testytest.addEventListener("click",testFunction)
     </script>
 
     </body>
