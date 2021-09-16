@@ -6,18 +6,22 @@
     </head>
     <body>
     <style>
+    	#startButton{
+        	text-align: center;
+            margin-top: 423px
+        }
     </style>
-        <button id="button">hi</button>
+        <div id="startButton">
+        	<button id="playButtonStart">Play</button>
+        </div>
     <script>
         console.log(window.outerWidth);
         console.log(window.outerHeight);
-        var things=[];
-        var testytest=document.getElementById("button")
-        var testFunction=function(){
-            things.push("things")
-            console.log(things)
+        var startButtonEl=document.getElementById("startButton")
+        var startButtonEffect=function(){
+            document.body.innerHTML="<p>this is where stuff should go</p>"
         }
-        testytest.addEventListener("click",testFunction)
+        startButtonEl.addEventListener("click", startButtonEffect)
     </script>
 
     </body>
