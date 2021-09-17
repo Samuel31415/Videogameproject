@@ -10,7 +10,7 @@
         	text-align: center;
             margin-top: 149px;
         }
-        #backButton{
+        .backButton{
             position: absolute;
             margin-top: -164px;
         }
@@ -18,16 +18,19 @@
         <div id="startButton">
         	<button id="playButtonStart">Play</button>
         </div>
-        <button id="backButton">back</button>
+        <button class="backButton">back</button>
     <script>
+        var page1=document.getElementsByClassName("page1");
+        var page2=document.getElementsByClassName("page2");
         var pageOn=1;
         console.log(window.outerWidth);
         console.log(window.outerHeight);
         //Start Button Programming
         var startButtonEl=document.getElementById("startButton");
         var startButtonEffect=function(){
-            document.body.innerHTML="<p>this is where stuff should go</p>"
+            document.body.innerHTML="<div class=page2><p>this is where stuff should go</p></div>"
             pageOn=2
+            <button class="backButton">back</button>
         }
         startButtonEl.addEventListener("click", startButtonEffect)
         //Back button programming
@@ -35,12 +38,12 @@
         var backButtonEffect=function(){
             if (pageOn===2){
                 pageOn=1;
+                page2.innerHTML="<div id=startButton><button id=playButtonStart>Play</button></div>";
             }
-            drawStartPage();
         }
         //Drawing Pages Functions
         var drawStartPage=function(){
-            document.body.innerHTML="<div id=startButton><button id=playButtonStart>Play</button></div>";
+            document.body.innerHTML="<div class=page1><div id=startButton><button id=playButtonStart>Play</button></div></div>";
             pageOn=1;
         }
     </script>
