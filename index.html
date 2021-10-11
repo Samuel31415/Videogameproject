@@ -23,8 +23,36 @@
             background-color: rgb(0, 255, 234);
             color: rgb(0, 123, 255);
         }
+        #top{
+                background-color: rgb(201, 201, 201);
+                width: 23px;
+                height: 53px;
+                position: absolute;
+                z-index: 148;
+                
+            }
+            #side{
+                background-color: rgb(125, 125, 125);
+                width: 23px;
+                height: 24px;
+                position: absolute;
+                z-index: 42;
+            }
+            #console{
+                z-index: 3;
+            }
     </style>
-        <h1>V. 0.1 Last update: 8:25:9:22</h1>
+        <div id='top'></div>
+        <div id="side"></div>
+        <script>
+            var hi = window.screenWidth;
+            document.getElementById("top").style.width = window.outerWidth-window.outerWidth/1.5+"px";
+            document.getElementById("top").style.marginLeft = window.outerWidth/37+"px";
+            document.getElementById("side").style.height = window.outerWidth/7+"px";
+            document.getElementById("side").style.width = window.outerWidth/7+"px";
+            document.getElementById("side").style.marginTop = window.outerWidth/22+"px";
+            document.getElementById("side").style.marginLeft = window.outerWidth/35+"px";
+        </script>
         <a href="/Videogameproject/stuFFF.html" class="fakeLink">Go STUFFFFFF</a>
 
     </body>
