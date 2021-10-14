@@ -5,30 +5,13 @@
         <title>Videogameproject</title>
     </head>
     <body>
-    <style>
-    	.fakeLink{
-        background-color: rgb(194, 151, 194);
-        text-decoration: none;
-        border: 5px solid black;
-    	}
-    	#startButton{
-        	text-align: center;
-            margin-top: 149px;
-        }
-        .backButton{
-            position: absolute;
-            margin-top: -164px;
-        }
-        a:focus{
-            background-color: rgb(0, 255, 234);
-            color: rgb(0, 123, 255);
-        }
-        #top{
+        <style>
+            #top{
                 background-color: rgb(201, 201, 201);
                 width: 23px;
                 height: 53px;
                 position: absolute;
-                z-index: 148;
+                z-index: 2;
                 
             }
             #side{
@@ -36,12 +19,56 @@
                 width: 23px;
                 height: 24px;
                 position: absolute;
-                z-index: 42;
+                z-index: 1;
             }
             #console{
                 z-index: 3;
             }
-    </style>
+            .dropbtn {
+                background-color: rgb(0, 0, 0);
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            #play{
+                margin-left: 50px;
+                z-index: 3;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: rgb(92, 92, 92);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {background-color: rgb(255, 255, 255);}
+            .dropdown:hover .dropdown-content {display: block;}
+            .dropdown:hover .dropbtn {background-color: rgb(48, 48, 48);}
+        </style>
+             <div class="dropdown" id="play">
+                <button class="dropbtn">Left</button>
+                <div class="dropdown-content" style="left:0;">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+             </div>
         <h1>11:38</h1>
         <div id='top'></div>
         <div id="side"></div>
